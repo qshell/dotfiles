@@ -4,7 +4,6 @@
 
 (require 'package)
 
-
 ;;; Code:
 
 ; Init repo and packages
@@ -54,10 +53,14 @@
   (require 'yasnippet)
   (yas-global-mode 1)
   :ensure t)
+(use-package yasnippet-snippets
+  :ensure t)
 (use-package magit
   :ensure t)
-(use-package dired
+(use-package evil
   :ensure t)
+;;(use-package dired
+;;  :ensure t)
 
 ; Disable all GUI elements
 (tool-bar-mode -1)
@@ -80,7 +83,7 @@
     ("06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" "450f3382907de50be905ae8a242ecede05ea9b858a8ed3cc8d1fbdf2d57090af" default)))
  '(package-selected-packages
    (quote
-    (dired magit yasnippet ace-jump-mode expand-region zygospore flycheck-rust flycheck projectile company dash racer rust-mode powerline color-theme-sanityinc-tomorrow which-key use-package))))
+    (evil yasnippet-snippets dired magit yasnippet ace-jump-mode expand-region zygospore flycheck-rust flycheck projectile company dash racer rust-mode powerline color-theme-sanityinc-tomorrow which-key use-package))))
 
 
 ; Font
