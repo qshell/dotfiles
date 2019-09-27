@@ -58,6 +58,8 @@
 (use-package magit
   :ensure t)
 (use-package evil
+  :init
+  (evil-mode 1)
   :ensure t)
 ;;(use-package dired
 ;;  :ensure t)
@@ -123,7 +125,8 @@
 (defadvice term (before force-zsh)
   (interactive (list term-shell)))
 (ad-activate 'term)
-(setq global-linum-mode t)
+(global-linum-mode 1)
+(setq linum-format "%4d ")
 
 
 (provide '.emacs)
