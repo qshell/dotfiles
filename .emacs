@@ -77,15 +77,49 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ansi-color-faces-vector
+   [default bold shadow italic underline bold bold-italic bold])
  '(ansi-color-names-vector
    ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
- '(custom-enabled-themes (quote (sanityinc-tomorrow-night)))
+ '(beacon-color "#f2777a")
+ '(custom-enabled-themes (quote (doom-gruvbox)))
  '(custom-safe-themes
    (quote
-    ("06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" "450f3382907de50be905ae8a242ecede05ea9b858a8ed3cc8d1fbdf2d57090af" default)))
+    ("071f5702a5445970105be9456a48423a87b8b9cfa4b1f76d15699b29123fb7d8" "f951343d4bbe5a90dba0f058de8317ca58a6822faa65d8463b0e751a07ec887c" "2a3ffb7775b2fe3643b179f2046493891b0d1153e57ec74bbe69580b951699ca" "70ed3a0f434c63206a23012d9cdfbe6c6d4bb4685ad64154f37f3c15c10f3b90" "d6f04b6c269500d8a38f3fabadc1caa3c8fdf46e7e63ee15605af75a09d5441e" "0fe9f7a04e7a00ad99ecacc875c8ccb4153204e29d3e57e9669691e6ed8340ce" "a24c5b3c12d147da6cef80938dca1223b7c7f70f2f382b26308eba014dc4833a" "06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" "450f3382907de50be905ae8a242ecede05ea9b858a8ed3cc8d1fbdf2d57090af" default)))
+ '(fci-rule-color "#37474f")
+ '(flycheck-color-mode-line-face-to-color (quote mode-line-buffer-id))
+ '(frame-background-mode (quote dark))
+ '(hl-sexp-background-color "#1c1f26")
+ '(jdee-db-active-breakpoint-face-colors (cons "#0d0d0d" "#81a2be"))
+ '(jdee-db-requested-breakpoint-face-colors (cons "#0d0d0d" "#b5bd68"))
+ '(jdee-db-spec-breakpoint-face-colors (cons "#0d0d0d" "#5a5b5a"))
+ '(objed-cursor-color "#cc6666")
  '(package-selected-packages
    (quote
-    (py-autopep8 elpy evil yasnippet-snippets dired magit yasnippet ace-jump-mode expand-region zygospore flycheck-rust flycheck projectile company dash racer rust-mode powerline color-theme-sanityinc-tomorrow which-key use-package))))
+    (doom-themes material-theme color-theme-sanityinc-solarized py-autopep8 elpy evil yasnippet-snippets dired magit yasnippet ace-jump-mode expand-region zygospore flycheck-rust flycheck projectile company dash racer rust-mode powerline color-theme-sanityinc-tomorrow which-key use-package)))
+ '(vc-annotate-background nil)
+ '(vc-annotate-color-map
+   (quote
+    ((20 . "#f36c60")
+     (40 . "#ff9800")
+     (60 . "#fff59d")
+     (80 . "#8bc34a")
+     (100 . "#81d4fa")
+     (120 . "#4dd0e1")
+     (140 . "#b39ddb")
+     (160 . "#f36c60")
+     (180 . "#ff9800")
+     (200 . "#fff59d")
+     (220 . "#8bc34a")
+     (240 . "#81d4fa")
+     (260 . "#4dd0e1")
+     (280 . "#b39ddb")
+     (300 . "#f36c60")
+     (320 . "#ff9800")
+     (340 . "#fff59d")
+     (360 . "#8bc34a"))))
+ '(vc-annotate-very-old-color nil)
+ '(window-divider-mode nil))
 
 
 ; Font
