@@ -85,7 +85,7 @@
     ("06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" "450f3382907de50be905ae8a242ecede05ea9b858a8ed3cc8d1fbdf2d57090af" default)))
  '(package-selected-packages
    (quote
-    (evil yasnippet-snippets dired magit yasnippet ace-jump-mode expand-region zygospore flycheck-rust flycheck projectile company dash racer rust-mode powerline color-theme-sanityinc-tomorrow which-key use-package))))
+    (py-autopep8 elpy evil yasnippet-snippets dired magit yasnippet ace-jump-mode expand-region zygospore flycheck-rust flycheck projectile company dash racer rust-mode powerline color-theme-sanityinc-tomorrow which-key use-package))))
 
 
 ; Font
@@ -117,6 +117,25 @@
 (use-package flycheck-rust
   :ensure t
   :config (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
+
+
+; Python
+(use-package elpy
+  :ensure t
+  :init
+  (elpy-enable))
+(use-package flycheck
+  :ensure t)
+(use-package py-autopep8
+  :ensure t
+  :init
+  (require 'py-autopep8)
+  (add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save))
+(when (require 'flycheck nil t)
+  (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
+  (add-hook 'elpy-mode-hook 'flycheck-mode))
+(setq python-shell-interpreter "ipython"
+      python-shell-interpreter-args "-i --simple-prompt")
 
 
 ; Other
